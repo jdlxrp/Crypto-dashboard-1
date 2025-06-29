@@ -1,0 +1,30 @@
+export default function Analysts() {
+  const insights = [
+    { analyst: "Blockchain Backer", coin: "XRP", note: "Watching 702 Fib retrace" },
+    { analyst: "Moon Lambo", coin: "XRP", note: "Positive outlook long term" },
+    { analyst: "Stock Moe", coin: "ETH", note: "Potential upside in next cycle" }
+  ];
+  return (
+    <div className="min-h-screen p-4 bg-gray-100">
+      <h1 className="text-2xl font-bold mb-4">Analyst Insights</h1>
+      <table className="min-w-full bg-white">
+        <thead>
+          <tr>
+            <th className="py-2 px-4 border">Analyst</th>
+            <th className="py-2 px-4 border">Coin</th>
+            <th className="py-2 px-4 border">Insight</th>
+          </tr>
+        </thead>
+        <tbody>
+          {insights.map((item, index) => (
+            <tr key={index}>
+              <td className="py-2 px-4 border">{item.analyst}</td>
+              <td className="py-2 px-4 border">{item.coin}</td>
+              <td className="py-2 px-4 border">{item.note}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
